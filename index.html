@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h2>LOGO</h2>
+      <nav>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">MORE</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div id="container">
+
+
+      <form class="login-container active">
+          <h2>Login</h2>
+          <div class="close"><ion-icon name="close-outline"></ion-icon></div>
+
+        <ion-icon name="person-outline"></ion-icon>
+        <div class="log-mail">
+          <input type="email" name="email" placeholder="Username or email" />
+          <label for="Email"><ion-icon name="mail-outline"></ion-icon></label>
+        </div>
+        
+        <div class="log-password">
+          <input type="password" name="logPassword" placeholder="Password" />
+          <label for="Password"
+            ><ion-icon name="lock-closed-outline"></ion-icon
+          ></label>
+        
+        </div>
+        
+        <button type="submit" class="log-btn">Login</button>
+        <p>Don't have an account?<a href="#">Register!</a></p>
+    </form>
+
+
+
+      <form class="register-container">
+        <div class="close"><ion-icon name="close-outline"></ion-icon></div>
+        
+        
+        <h2>Register</h2>
+        <ion-icon name="person-outline"></ion-icon>
+        <div class="reg-mail">
+          <input type="email" type="regEmail" placeholder="New E-mail" />
+          <label for="Email"></label>
+        </div>
+        
+        <div class="username">
+            <input type="text" name="regUsername" placeholder="New Username" />
+            <label for="Username"
+            ><ion-icon name="mail-outline"></ion-icon
+                ></label>
+            </div>
+            
+            <div class="reg-password">
+                <input type="password" name="regPassword" placeholder="Password" />
+                <label for="Password"
+                ><ion-icon name="lock-closed-outline"></ion-icon
+                    ></label>
+                </div>
+                
+                <button type="submit" class="reg-btn">Sign Up</button>
+       
+                <p>Already have an account?<a href="#">Sign In!</a></p>
+            </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>

@@ -1,0 +1,178 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background-color: #0052cc;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header h2 {
+    color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* NAVIGATION */
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #d1d1d1;
+}
+
+/* CONTAINER */
+#container {
+  max-width: 500px;
+  margin: 80px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+  min-height: 400px;
+}
+
+/* SHARED FORM STYLES */
+.register-container,
+.login-container {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+  flex-direction: column;
+  gap: 20px;
+  display:none;
+}
+
+.login-container.active,
+.register-container.active {
+    opacity: 1;
+  display: flex;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #0052cc;
+}
+
+/* ICONS INSIDE FORM */
+.log-mail,.reg-mail,
+.username,
+.log-password,.reg-password {
+  position: relative;
+}
+
+.log-mail label,.reg-mail label,
+.username label,
+.log-password label,.reg-password label {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+/* CLOSE ICON */
+.close {
+  position: absolute;
+  right:2px;
+  font-size: 22px;
+  color: #555;
+  cursor: pointer;
+}
+
+/* FOOTER LINKS */
+#container p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#container a {
+  color: #0052cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#container a:hover {
+  text-decoration: underline;
+}
+button{
+    padding: 12px 25px;
+    background-color: #0052cc;
+    color:white;
+    margin-top: 20px;
+    font-size: 20px;
+}
+button:hover{
+    cursor: pointer;
+    transform: scaleX(.9);
+    color: blue;
+    background-color: white;
+    transition: .5s ease;
+}
