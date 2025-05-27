@@ -6,10 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="car.css">
     <link rel="stylesheet" href="style.css">
-    <script src="car.js"></script>
-</head>
-<body>
-     <header>
+  </head>
+  <body>
+    <header>
       <h2>LOGO</h2>
       <nav>
         <div class="nav-links">
@@ -23,9 +22,19 @@
       </nav>
     </header>
 
-    <h2>Car-ibu to our page !!</h2>
-    WITH JUST A SINGLE CLICK OF A BUTTON GET READY TO JUMP INTO A WIDE ARRAY OF VEHICLES?
-    FIND ONE THAT IS BEST SUITED FOR YOU!!!
-   <p> CLICK HERE TO <a href="#"><button class="btn">GET STARTED</button></a></p>
+    <div class="info">
+      <h2>Car-ibu to our page !!</h2>
+      WITH JUST A SINGLE CLICK OF A BUTTON GET READY TO JUMP INTO A WIDE ARRAY OF VEHICLES?
+      FIND ONE THAT IS BEST SUITED FOR YOU!!!
+         <p> CLICK HERE TO <a href="#"><button class="alert-btn">GET STARTED</button></a></p>
+    </div>
+
+   <div class="search-section">
+    <input type="text" placeholder="Search for a car" id="search-input">
+    <button class="search-btn">Search</button>
+  </div>
+  <div id="car-list"></div>
 </body>
+<script src="car.js"></script>
+
 </html>

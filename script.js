@@ -86,4 +86,22 @@ registerContainer.addEventListener("submit", (e) =>{
     console.log("Registration successful",{email,username,password});
     alert("Registration Successful!");
     registerContainer.reset();
-})
+});
+registerBtn.addEventListener("click", (e) =>{
+    e.preventDefault();
+    registerContainer.classList.remove("active");
+    loginContainer.classList.add("active");
+});
+loginBtn.addEventListener("click", (e) =>{
+    e.preventDefault();
+    if(logEmail.value !== regEmail.value){
+        alert("You do not have an account yet, please register first.");
+        return;
+    }
+    if (logPassword.value !== regPassword.value){
+        alert("Passwords do not match, please try again.");
+        return;
+    }
+    loginContainer.classList.remove("active");
+    alert("Login Successful!");
+});
