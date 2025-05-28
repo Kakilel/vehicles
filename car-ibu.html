@@ -15,8 +15,8 @@
           <ul>
             <li><a href="#">HOME</a></li>
             <li><a href="#">ABOUT</a></li>
-            <li><a href="#">MORE</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#" id="wishlist-toggle">WISHLIST</a></li>
+            <li><a href="index.html">LOGIN</a></li>
           </ul>
         </div>
       </nav>
@@ -30,10 +30,19 @@
     </div>
 
    <div class="search-section">
+    <div id="search-history"></div>
+    <button id="clear-history">Clear History</button>
+
+
     <input type="text" placeholder="Search for a car" id="search-input">
     <button class="search-btn">Search</button>
   </div>
   <div id="car-list"></div>
+  <div id="wishlist active" class="hidden">
+  <h2>Your Wishlist</h2>
+  <ul id="wishlist-items"></ul>
+</div>
+
 </body>
 <script src="car.js"></script>
 
