@@ -84,7 +84,7 @@ searchBtn.addEventListener("click", async () => {
     }
 });
 
-function displaySearchHistory() {
+ displaySearchHistory = () => {
     const history = JSON.parse(localStorage.getItem("carSearchHistory")) || [];
     const container = document.getElementById("search-history");
     container.innerHTML = "<h4>Recent Searches:</h4>" + history.map(item => `<span class="history-item">${item}</span>`).join(", ");
@@ -96,7 +96,7 @@ document.getElementById("clear-history").addEventListener("click", () => {
     alert("Search history cleared.");
 });
 
-function saveToWishlist(make, model, image) {
+saveToWishlist = (make, model, image) => {
     let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
     const exists = wishlist.some(item => item.make === make && item.model === model);
     if (exists) {
