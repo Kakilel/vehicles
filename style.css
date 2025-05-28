@@ -176,3 +176,33 @@ button:hover{
     background-color: white;
     transition: .5s ease;
 }
+.wishlist-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+}
+
+.wishlist-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.wishlist-info button {
+  margin-top: 5px;
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+img{
+  width: 150px;
+  
+  padding: 0;
+}

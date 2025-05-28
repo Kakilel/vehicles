@@ -55,201 +55,235 @@ header {
     background-color: #e73370;
 }
 
-/* Search Section */
-.search-section {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 700px;
-    margin: 30px auto;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
-#search-input {
-    padding: 12px;
-    width: 60%;
-    max-width: 300px;
-    margin: 10px 5px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-.search-btn {
-    padding: 12px 20px;
-    background-color: #4caf50;
-    border: none;
-    color: white;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-btn:hover {
-    background-color: #43a047;
-}
-
-/* Search History */
-#search-history {
-    margin-bottom: 20px;
-}
-
-.history-item {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 6px 14px;
-    margin: 4px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.history-item:hover {
-    background-color: #0056b3;
-}
-
-/* Clear Button */
-#clear-history {
-    background-color: #dc3545;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
-}
-
-#clear-history:hover {
-    background-color: #b52a38;
-}
-
-/* Car Card Styling */
-.car-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 600px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.car-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
-}
-
-.car-card img {
-    border-radius: 8px;
-    margin: 10px 0;
-    max-width: 100%;
-    height: auto;
-}
 
 
 
-
-.car-card {
-    animation: fadeInUp 0.5s ease forwards;
-    opacity: 0;
-}
-.car-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    padding: 15px;
-    width: 280px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
-    vertical-align: top;
-}
-.car-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-.car-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-.car-card h3 {
-    margin: 10px 0 5px;
-    font-size: 1.1rem;
-    color: #333;
-}
-.car-card p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-#wishlist {
-  position: relative;
-  background-color: #f5f5f5;
-  border: 2px solid #ff9800;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 700px;
-  display: none;
-  transition: all 0.3s ease-in-out;
-}
-
-#wishlist h2 {
-  color: #ff5722;
-  margin-bottom: 10px;
-}
-
-#wishlist ul {
-  list-style: none;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
   padding: 0;
 }
 
-#wishlist li {
-  background: #fff3e0;
-  margin-bottom: 8px;
-  padding: 10px;
-  border-radius: 6px;
+header {
+  background: #333;
+  color: white;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#wishlist li button {
-  background-color: #ff4d4d;
-  border: none;
-  padding: 4px 8px;
-  border-radius: 4px;
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
   color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+.info,
+.search-section {
+  display: none;
+  padding: 30px;
+  text-align: center;
+}
+
+.info.active,
+.search-section.active {
+  display: block;
+}
+
+.alert-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+
+.search-bar {
+  margin: 30px auto;
+  max-width: 500px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#search-input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-.hidden {
+
+#car-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.car-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.car-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.wishlist-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #072cff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+#wishlist-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #17a2b8;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#wishlist {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background: white;
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 10px;
   display: none;
+  z-index: 999;
 }
-.hidden :active{
-    display: flex;
+
+#wishlist.show {
+  display: block;
+}
+
+#wishlist h3 {
+  margin-top: 0;
+}
+
+#wishlist-items li {
+  list-style: none;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#wishlist-items img {
+  width: 60px;
+  height: auto;
+  border-radius: 5px;
 }
 
 
+#search-history {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.history-item {
+  display: inline-block;
+  margin: 4px 6px;
+  padding: 5px 10px;
+  background-color: #dedede;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Footer Styling */
+.main-footer {
+  background-color: #2348dc;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-footer .icons {
+  margin-bottom: 15px;
+}
+
+.main-footer .icons a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.main-footer .icons a:hover {
+  color: #e96c05; /* Bright highlight on hover */
+}
+
+.main-footer p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+img{
+    width: 20px;
+}
