@@ -161,7 +161,7 @@ nav ul li a {
 }
 
 .car-card img {
-  max-width: 100%;
+
   height: auto;
   border-radius: 6px;
   margin-bottom: 10px;
@@ -254,7 +254,7 @@ nav ul li a {
   }
 }
 
-/* Footer Styling */
+
 .main-footer {
   background-color: #2348dc;
   color: #fff;
@@ -283,7 +283,4 @@ nav ul li a {
   margin: 0;
   font-size: 14px;
   opacity: 0.8;
-}
-img{
-    width: 20px;
 }
